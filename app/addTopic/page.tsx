@@ -1,4 +1,5 @@
 "use client"
+export const dynamic = "force-dynamic";
 import React, { useState } from 'react'
 import {useRouter} from "next/navigation"
 const Page = () => {
@@ -13,7 +14,9 @@ const Page = () => {
         return; 
       }
       try{
-      const res=await fetch('/api/topics',{
+        const BASE_URL =process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
+
+      const res=await fetch('${BASE_URL}/api/topics',{
         method:"POST",
         headers:{"Content-type":"application/json"},
         body:JSON.stringify({title,description}),

@@ -13,7 +13,7 @@ type EditTopicProps = {
     const handleSubmit=async(e: React.FormEvent)=>{
     e.preventDefault();
      try{
-      const BASE_URL =process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
+      const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
       const res= await fetch(`${BASE_URL}/api/topics/${id}`,{
         method: "PUT",
         headers:{
