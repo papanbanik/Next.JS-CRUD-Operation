@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import React from 'react'
 import {HiOutlineTrash, HiPencilAlt} from 'react-icons/hi'
 import  RemoveButton  from './RemoveButton';
@@ -9,7 +10,8 @@ type Topic = {
 };
 const getTopic = async () =>{
      try{
-      const res = await fetch("/api/topics",{cache: "no-store"});
+      const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
+      const res = await fetch("${BASE_URL}/api/topics",{cache: "no-store"});
       if(!res.ok){
         throw new Error("Failed to fetch topics")
              }
