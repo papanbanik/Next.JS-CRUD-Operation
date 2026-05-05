@@ -10,8 +10,7 @@ const RemoveButton = ({id}:Topic) => {
     const removeTopic=async()=>{
         const confirmed = confirm("Are you sure?");
         if(confirmed){
-          const BASE_URL =process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
-         const res =  await fetch(`${BASE_URL}/api/topics?id=${id}`,{method: "DELETE",})
+         const res =  await fetch(`/api/topics?id=${id}`,{method: "DELETE",})
         if(res.ok)
           {
            router.refresh();
