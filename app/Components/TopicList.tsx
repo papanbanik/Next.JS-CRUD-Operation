@@ -11,7 +11,7 @@ type Topic = {
 const getTopic = async () =>{
      try{
       const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
-      const res = await fetch("${BASE_URL}/api/topics",{cache: "no-store"});
+      const res = await fetch(`${BASE_URL}/api/topics`,{cache: "no-store"});
       if(!res.ok){
         throw new Error("Failed to fetch topics")
              }

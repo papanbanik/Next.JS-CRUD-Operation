@@ -16,7 +16,7 @@ const Page = () => {
       try{
         const BASE_URL =process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000"
 
-      const res=await fetch('${BASE_URL}/api/topics',{
+      const res=await fetch(`${BASE_URL}/api/topics`,{
         method:"POST",
         headers:{"Content-type":"application/json"},
         body:JSON.stringify({title,description}),
