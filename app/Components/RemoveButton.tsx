@@ -10,7 +10,7 @@ const RemoveButton = ({id}:Topic) => {
     const removeTopic=async()=>{
         const confirmed = confirm("Are you sure?");
         if(confirmed){
-         const res =  await fetch(`/api/topics?id=${id}`,{method: "DELETE",})
+         const res =  await fetch(`https://daily-task-allocation.vercel.app/api/topics?id=${id}`,{method: "DELETE",})
         if(res.ok)
           {
            router.refresh();
