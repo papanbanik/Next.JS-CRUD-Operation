@@ -9,7 +9,7 @@ type Topic = {
 };
 const getTopic = async () =>{
      try{
-      const res = await fetch("/api/topics",{cache: "no-store"});
+      const res = await fetch("https://daily-task-allocation.vercel.app/api/topics",{cache: "no-store"});
       if(!res.ok){
         throw new Error("Failed to fetch topics")
              }
