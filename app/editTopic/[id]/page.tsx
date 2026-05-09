@@ -16,7 +16,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
   
   const { id } = await params;
 
-  const res = await fetch("http://localhost:3000/api/topics", {
+  const res = await fetch("https://daily-task-allocation.vercel.app/api/topics", {
     cache: "no-store",
   });
 
