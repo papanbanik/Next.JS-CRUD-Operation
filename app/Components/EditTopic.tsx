@@ -13,7 +13,7 @@ type EditTopicProps = {
     const handleSubmit=async(e: React.FormEvent)=>{
     e.preventDefault();
      try{
-      const res= await fetch(`/api/topics/${id}`,{
+      const res= await fetch(`https://daily-task-allocation.vercel.app/api/topics/${id}`,{
         method: "PUT",
         headers:{
           "Content-Type": "application/json",
