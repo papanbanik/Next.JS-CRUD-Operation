@@ -14,7 +14,7 @@ const Page = () => {
       }
       try{
 
-      const res=await fetch("/api/topics",{
+      const res=await fetch("https://daily-task-allocation.vercel.app/api/topics",{
         method:"POST",
         headers:{"Content-type":"application/json"},
         body:JSON.stringify({title,description}),
