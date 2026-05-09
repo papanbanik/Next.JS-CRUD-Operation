@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import React from 'react'
 import {HiOutlineTrash, HiPencilAlt} from 'react-icons/hi'
 import  RemoveButton  from './RemoveButton';
